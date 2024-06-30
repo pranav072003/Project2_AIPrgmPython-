@@ -98,8 +98,8 @@ def load_checkpoint(filename):
                                  nn.Linear(checkpoint['hidden_layers'][1], checkpoint['output_size']),
                                  nn.LogSoftmax(dim = 1)
                                  )
-#     optimizer = optim.Adam(model.parameters(), lr= checkpoint['learning_rate'])
     model.load_state_dict(checkpoint['state_dict'])
+#     optimizer = optim.Adam(model.parameters(), lr= checkpoint['learning_rate'])
 #     optimizer.load_state_dict(checkpoint['optimizer_state'])
     
     return model

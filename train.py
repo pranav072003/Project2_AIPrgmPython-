@@ -215,6 +215,6 @@ with active_session():
               'state_dict': model.state_dict(),
                'epochs': epochs,
               'learning_rate': parse.learning_rate,
-               'optimizer_state': optimizer.state_dict}
+               'optimizer_state': optimizer.state_dict()}
 
     torch.save(checkpoint, 'checkpoint.pth')
